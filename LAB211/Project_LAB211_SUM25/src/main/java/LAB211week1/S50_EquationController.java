@@ -74,7 +74,6 @@ public class S50_EquationController {
             view.showSolutions(result);
         }
 
-        // Phân tích hệ số
         List<Float> inputs = List.of(a, b, c);
 
         view.showMessage("=== Even numbers among A, B, C ===");

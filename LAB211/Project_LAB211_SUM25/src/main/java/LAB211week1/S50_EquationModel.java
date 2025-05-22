@@ -10,8 +10,8 @@ public class S50_EquationModel {
 
     public List<Float> solveLinear(float a, float b) {
         if (a == 0) {
-            if (b == 0) return new ArrayList<>(); // Infinite solutions
-            return null; // No solution
+            if (b == 0) return new ArrayList<>(); 
+            return null; 
         }
         return Collections.singletonList(-b / a);
     }
