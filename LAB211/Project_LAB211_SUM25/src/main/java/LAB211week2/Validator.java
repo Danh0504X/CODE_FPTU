@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package LAB211week2;
-
-import LAB211week2.S51_Operator;
 import java.util.Scanner;
 
 /**
