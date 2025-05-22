@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package de190155.project_lab211_sum25;
+package LAB211week2;
 
 import LAB211week2.S51_Operator;
 import java.util.Scanner;

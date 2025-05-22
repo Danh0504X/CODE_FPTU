@@ -1,4 +1,4 @@
-package de190155.project_lab211_sum25;
+package LAB211week2;
 
 public class TinhBMI {
     private double weight; 
