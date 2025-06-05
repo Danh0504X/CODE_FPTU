@@ -27,12 +27,10 @@ public class Test {
 
             switch (choice) {
                 case 1:
-                    MenuMayTinh calculatorApp = new MenuMayTinh(sc);
-                    calculatorApp.start();  
+                    new MenuMayTinh(sc).start();  
                     break;
                 case 2:
-                    ShapeProgram shapeApp = new ShapeProgram();
-                    shapeApp.start();  
+                    new ShapeProgram().start(); 
                 case 3:
                     new MatrixProgram(sc).start(); 
                     break;
@@ -41,7 +39,7 @@ public class Test {
                     break;
             }
         } while (choice != 4);
-
+        
         sc.close();
     }
 }

@@ -16,26 +16,26 @@ public class S11_Converter {
     }
     
     public int power(int base, int exponent) {
-    if (exponent == 0) return 1;
-    if (exponent < 0) throw new IllegalArgumentException("Exponent must be non-negative.");
+        if (exponent == 0) return 1;
+        if (exponent < 0) throw new IllegalArgumentException("Exponent must be non-negative.");
 
-    int result = 1;
-    for (int i = 1; i <= exponent; i++) {
-        result *= base;
+        int result = 1;
+        for (int i = 1; i <= exponent; i++) {
+            result *= base;
+        }
+        return result;
     }
-    return result;
-}
 
     private int toDecimal(String value, int base) {
-    int result = 0;
-    int exponent = 0;  
-    for (int i = value.length() - 1; i >= 0; i--) {
-        char ch = value.charAt(i);         
-        int digit = charToDigit(ch);
-        result += digit * power(base, exponent);
-        exponent++; 
-    }
-    return result;
+        int result = 0;
+        int exponent = 0;  
+        for (int i = value.length() - 1; i >= 0; i--) {
+            char ch = value.charAt(i);         
+            int digit = charToDigit(ch);
+            result += digit * power(base, exponent);
+            exponent++; 
+        }
+        return result;
     }
 
     private String fromDecimal(int number, int base) {

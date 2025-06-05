@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package LAB211week2;
+package LAB211week3;
 
 import java.util.Scanner;
 
@@ -17,31 +17,34 @@ public class Test {
         int choice;
 
         do {
-            System.out.println("======== LAB WEEK2 PROGRAM MENU ========");
-            System.out.println("1. Short 51 - Calculator + BMI");
-            System.out.println("2. Short 61 - Shape Calculator");
-            System.out.println("3. Short 74  - Matrix");
-            System.out.println("4. Exit");
+            System.out.println("======== LAB WEEK3 PROGRAM MENU ========");
+            System.out.println("1. Short 001 -  Bubble Sort Algorithm");
+            System.out.println("2. Short 004 -  Quick Sort Algorithm");
+            System.out.println("3. Short 006  - Binary Search Algorithm");
+            System.out.println("4. Short 084  - Stack");
+            System.out.println("5. Exit");
             System.out.print("Please choose one option: ");
-            choice = Validator.getChoice(sc, 1, 4);
+            choice = Validator.getChoice(sc, 1, 5);
 
             switch (choice) {
                 case 1:
-                    MenuMayTinh calculatorApp = new MenuMayTinh(sc);
-                    calculatorApp.start();  
+                    BubbleSort.execute(sc);
                     break;
                 case 2:
-                    ShapeProgram shapeApp = new ShapeProgram();
-                    shapeApp.start();  
+                   QuickSort.execute(sc);
+                   break;
                 case 3:
-                    new MatrixProgram(sc).start(); 
+                    BinarySearch.execute(sc);
                     break;
                 case 4:
+                    StackDemo.execute(sc);
+                    break;
+                case 5:
                     System.out.println("Exiting main program...");
                     break;
             }
-        } while (choice != 4);
-
+        } while (choice != 5);
+        
         sc.close();
     }
 }

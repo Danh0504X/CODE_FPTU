@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package LAB211week2;
+package LAB211week3;
 import java.util.Scanner;
 
 /**
@@ -63,14 +63,25 @@ public class Validator {
         }
     }
     
-    public static int getValidInt(Scanner sc, String message) {
-        while (true) {
+   public static int getPositiveInt(Scanner sc, String message) {
+    int val;
+    do {
+        val = getValidInt(sc, message);
+        if (val <= 0) {
+            System.out.print("Input must be > 0. ");
+        }
+    } while (val <= 0);
+    return val;
+}
+
+public static int getValidInt(Scanner sc, String message) {
+    while (true) {
+        try {
             System.out.print(message);
-            try {
-                return Integer.parseInt(sc.nextLine());
-            } catch (NumberFormatException e) {
-                System.out.println("Please enter a valid number.");
-            }
+            return Integer.parseInt(sc.nextLine().trim());
+        } catch (Exception e) {
+            System.out.println("Invalid number. Try again.");
         }
     }
+}
 }

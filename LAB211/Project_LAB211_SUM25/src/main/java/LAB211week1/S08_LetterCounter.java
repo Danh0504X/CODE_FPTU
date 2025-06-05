@@ -50,6 +50,6 @@ public class S08_LetterCounter {
             }
         } while (input.isEmpty());
         return input;
-    }
+        }
     }
 

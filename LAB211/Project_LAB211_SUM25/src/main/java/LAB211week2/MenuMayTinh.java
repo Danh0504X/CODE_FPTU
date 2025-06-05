@@ -52,27 +52,26 @@ public class MenuMayTinh {
         System.out.println("----- Normal Calculator -----");
         System.out.println("Allowed operations: +  -  *  /  ^  =");
 
-        double firstNumber = Validator.getValidDouble(sc, "Enter a number: ");
-        mtinh.setMemory(firstNumber);
-
-        while (true) {
-            String op = Validator.getValidOperator(sc, "Enter an operator: ");
-
-            if (op.equals("=")) {
-                System.out.println("Result: " + mtinh.getMemory());
-                return;
+ //
+ 
+                double so1 = Validator.getValidDouble(sc, "Nhap so thu nhat");
+                mtinh.setMemory(so1);
+                
+                while(true) {
+                    String op = Validator.getValidOperator(sc, "Hay nhap phep tinh");
+                    
+                    if(op.equals("=")) {
+                        System.out.println("Resuilt: " + mtinh.getMemory());
+                        return;
+                        }
+                    
+                    double so2 = Validator.getValidDouble(sc,"Nhap so thu 2: ");
+                        
+                  mtinh.changeMemory(op, so2);
+                System.out.println("Memory = " + mtinh.getMemory());    
             }
-
-            double nextNumber = Validator.getValidDouble(sc, "Enter next number: ");
-
-            try {
-                mtinh.changeMemory(op, nextNumber);
-                System.out.println("Memory = " + mtinh.getMemory());
-            } catch (ArithmeticException e) {
-                System.out.println("Math Error: " + e.getMessage());
-            }
-        }
-    }
+         }
+    
     private void runBMICalculator() {
         System.out.println("----- BMI Calculator -----");
 
