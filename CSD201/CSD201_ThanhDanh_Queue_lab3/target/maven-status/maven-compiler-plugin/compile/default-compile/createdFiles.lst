@@ -1,0 +1,5 @@
+App\Main.class
+view\PatientView.class
+controller\PatientController.class
+model\Patient.class
+model\PatientQueueModel.class
