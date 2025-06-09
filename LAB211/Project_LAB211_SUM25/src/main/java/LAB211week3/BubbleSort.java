@@ -39,7 +39,7 @@ public class BubbleSort {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
-                    swapped = true;
+                    swapped = true;  // nếu có hoán đổi chứng tỏ bảng chưa sắp xếp xong 
                 }
             }
             if (!swapped) break;
