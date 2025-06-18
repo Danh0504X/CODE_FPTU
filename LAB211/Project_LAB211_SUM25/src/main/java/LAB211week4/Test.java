@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package LAB211week4;
-
-import LAB211week3.*;
 import java.util.Scanner;
 
 
@@ -20,29 +18,23 @@ public class Test {
         do {
             System.out.println("======== LAB WEEK4 PROGRAM MENU ========");
             System.out.println("1. Short P105 - Input & Display Student and Teacher Info");
-            System.out.println("2. [Tên bài tập thứ hai]");
+            System.out.println("2. Long P021 - Student Managerment");
             System.out.println("3. Exit");
             System.out.print("Please choose one option: ");
-            choice = Validator.getChoice(sc, 1, 5);
+            choice = Validator.getChoice(sc, 1, 3);
 
             switch (choice) {
                 case 1:
-                   Case1.run(sc);
+                    Main2.assignment105Menu(sc);
                     break;
                 case 2:
-                   QuickSort.execute(sc);
+                    Main.studentMenu(sc);
                    break;
                 case 3:
-                    BinarySearch.execute(sc);
-                    break;
-                case 4:
-                    StackDemo.execute(sc);
-                    break;
-                case 5:
                     System.out.println("Exiting main program...");
                     break;
             }
-        } while (choice != 5);
+        } while (choice != 3);
         
         sc.close();
     }
