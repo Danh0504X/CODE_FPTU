@@ -41,7 +41,7 @@ public class Validator {
             System.out.print(msg);
             String input = sc.nextLine().trim();
             if (input.matches("\\d{6}")) return input;
-            System.out.println("Data input is invalid");
+            System.out.println("Data input is invalid - ID must had 6 num ");
         }
     }
 
@@ -58,8 +58,8 @@ public class Validator {
         while (true) {
             System.out.print(msg);
             String input = sc.nextLine().trim();
-            if (input.matches("\\d{12}")) return input;
-            System.out.println("Data input is invalid");
+            if (input.matches("\\d{10}")) return input;
+            System.out.println("Number must contant 10 num(only num)");
         }
     }
 
